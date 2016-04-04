@@ -24,6 +24,9 @@ xhr.get('https://api.wheretheiss.at/v1/satellites/25544', function(err, dataFrom
   	var nameFromJson = convertJsonData.latitude;
   	console.log(convertJsonData.latitude);
 
-  document.body.innerHTML = example({ name: name, location : nameFromJson });
+  	var locationTwo = convertJsonData.longitude;
+  	console.log(convertJsonData.longitude);
+
+  document.body.innerHTML = example({ name: name, location : nameFromJson, longitude : locationTwo });
   // document.body.innerHTML = example({ location : nameFromJson });
 })
